@@ -1,0 +1,12 @@
+{
+  "appenders"      : [
+    {
+      "type" : "console"
+    },
+    {
+      "type"     : "file",
+      "filename" : "log/node-amqp.log"
+    }
+  ],
+  "replaceConsole" : true
+}

@@ -1,0 +1,17 @@
+{
+  "name": "node-amqp-container",
+  "version": "0.0.1",
+  "main": "index.js",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-cli": "~0.1.11",
+    "jasmine-node": "https://github.com/CraigCav/grunt-jasmine-node/tarball/registermultitask",
+    "grunt-contrib-jshint": "~0.8.0"
+  },
+  "dependencies": {
+    "amqp": "~0.1.8",
+    "log4js": "~0.6.9",
+    "mocked": "0.0.3",
+    "underscore": "~1.5.2"
+  }
+}

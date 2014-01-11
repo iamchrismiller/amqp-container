@@ -1,0 +1,18 @@
+.DS_Store
+Icon?
+current
+*/current/*
+# Thumbnails
+._*
+current
+*/current/*
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# CDT-specific
+.cproject
+.idea/
+social.esproj/
+node_modules
+log/*
