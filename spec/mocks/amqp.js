@@ -1,3 +1,5 @@
+/*global process */
+
 "use strict";
 
 //node
@@ -27,6 +29,7 @@ AMQP.prototype.queue = function(name, options, callback) {
 
 //Most Connection Creation Call
 AMQP.prototype.createConnection = function () {
+  var self = this;
 
   this.connection = {
     publish : function(routingKey, message, options, callback) {
@@ -34,23 +37,25 @@ AMQP.prototype.createConnection = function () {
     }
   };
 
-  setTimeout(function() {
-    this.emit("ready");
-  }.bind(this));
+  process.nextTick(function () {
+    self.emit("ready");
+  });
 
   return this;
 };
 
 
 AMQP.prototype.exchange = function(name, options, callback) {
+  var self = this;
+
   callback({
     name : name,
     connection : this.connection
   });
 
-  setTimeout(function() {
-    this.emit("exchangeBound");
-  }.bind(this));
+  process.nextTick(function () {
+    self.emit("exchangeBound");
+  });
 
   return this;
 };
