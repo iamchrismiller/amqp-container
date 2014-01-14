@@ -25,7 +25,7 @@ describe('AMQP Integration Publishing Suite', function() {
     }
   };
 
-  xit('Should publish message to specified queue and consume it via "message" event', function(done) {
+  it('Should publish message to specified queue and consume it via "message" event', function(done) {
     var inst = AMQPFactory.getInstance(AMQP, options);
 
     inst.on('ready', function() {
