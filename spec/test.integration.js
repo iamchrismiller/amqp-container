@@ -25,37 +25,24 @@ describe('AMQP Integration Publishing Suite', function() {
     }
   };
 
-  it('Should publish message to specified queue and consume it via "message" event', function(done) {
-    var inst = AMQPFactory.getInstance(AMQP, options);
-
-    inst.on('ready', function() {
-      //Subscribe / Create Queue on
-      inst.subscribe(queue, options.exchange.name, null, { durable : true, autoDelete : false }, { ack : true });
-    });
-
-    //Publish Message For Test To Consumes
-    inst.on('exchangeBound', function() {
-      inst.publish(queue, { test : true }, { contentType : 'application/json'}, function(err) {
-        expect(err).toBeFalsy();
-      });
-    });
-
-    //Listen For Message Event
-    inst.on('message', function(queueName, message, meta, next) {
-      expect(queueName).toEqual(queue);
-      expect(message).toEqual({ test : true});
-      done();
-    });
-  });
-
   it('Should publish multiple message to specified queue and consume them with ack', function(done) {
     var inst = AMQPFactory.getInstance(AMQP, options);
     var messageCount = 0;
     var publishCount = 0;
 
     inst.on('ready', function() {
+
+      var optionHash = {
+        queue : {
+          durable : true, autoDelete : false
+        },
+        subscribe : {
+          ack : true
+        }
+      };
+
       //Subscribe / Create Queue on
-      inst.subscribe(queue, options.exchange.name, null, { durable : true, autoDelete : false }, { ack : true });
+      inst.subscribe(queue, options.exchange.name, optionHash);
     });
 
     //Publish Message For Test To Consumes
@@ -72,7 +59,6 @@ describe('AMQP Integration Publishing Suite', function() {
     inst.on('message', function(queueName, message, meta, ackShift) {
       expect(queueName).toEqual(queue);
       expect(message).toEqual({ test : true});
-
       messageCount++;
 
       if (messageCount === publishCount) {
@@ -83,4 +69,6 @@ describe('AMQP Integration Publishing Suite', function() {
       }
     });
   });
+
+
 });

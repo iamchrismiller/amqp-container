@@ -18,7 +18,7 @@ var harness = {
 //LogLevel Hack For Tests
 var logLevelSet = false;
 if(!logLevelSet) {
-  harness.setLogLevel('WARN');
+  harness.setLogLevel('INFO');
   logLevelSet = true;
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "node-amqp-container",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "devDependencies": {
     "grunt": "~0.4.2",
@@ -12,6 +12,7 @@
     "amqp": "~0.1.8",
     "log4js": "~0.6.9",
     "mocked": "0.0.3",
-    "underscore": "~1.5.2"
+    "underscore": "~1.5.2",
+    "extend": "~1.2.1"
   }
 }
