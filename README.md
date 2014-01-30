@@ -93,6 +93,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+- 0.1.4 Fixed issue with queue binding
 - 0.1.3 Fixed issue with exchange binding
 - 0.1.2 Streamlined subscribe method
 - 0.1.1 Added Singleton Connect Method
