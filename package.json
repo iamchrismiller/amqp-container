@@ -2,6 +2,10 @@
   "name": "node-amqp-container",
   "version": "0.1.4",
   "main": "index.js",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://git.onehealth.com/cmiller/node-amqp-container.git"
+  },
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-cli": "~0.1.11",
