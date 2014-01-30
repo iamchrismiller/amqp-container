@@ -1,6 +1,6 @@
 {
   "name": "node-amqp-container",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "index.js",
   "devDependencies": {
     "grunt": "~0.4.2",
