@@ -93,6 +93,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## Release History
 
+- 0.1.5 Update exchange logic
 - 0.1.4 Fixed issue with queue binding
 - 0.1.3 Fixed issue with exchange binding
 - 0.1.2 Streamlined subscribe method
@@ -101,7 +102,7 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 
 ## License
 
-Licensed under the Apache 2.0 license.
+Licensed under the MIT license.
 
 ## Author
 

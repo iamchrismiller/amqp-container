@@ -1,7 +1,8 @@
 {
   "name": "node-amqp-container",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "index.js",
+  "license": "MIT",
   "repository" : {
     "type" : "git",
     "url" : "https://git.onehealth.com/cmiller/node-amqp-container.git"
