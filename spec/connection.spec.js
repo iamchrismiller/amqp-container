@@ -8,8 +8,6 @@ var AMQPConnection = require(harness.lib + 'AMQPConnection');
 var AMQP = require('./mocks/amqp');
 var AMQPLibInstance = new AMQP();
 
-
-
 //Connection Test Suite
 describe('AMQP Connection Suite', function() {
 

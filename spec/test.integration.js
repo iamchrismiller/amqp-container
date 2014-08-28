@@ -15,8 +15,8 @@ describe('AMQP Integration Publishing Suite', function() {
     host: '10.0.2.15',
     port: 5672,
     vhost: '/',
-    login: 'guest',
-    password: 'guest',
+    login: 'unknownuserdev',
+    password: 'unknownpassdev',
     //create an exchange for tests
     exchange  : {
       name : 'amq.direct',
@@ -69,6 +69,5 @@ describe('AMQP Integration Publishing Suite', function() {
       }
     });
   });
-
 
 });

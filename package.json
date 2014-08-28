@@ -9,7 +9,7 @@
   "devDependencies": {
     "grunt": "~0.4.2",
     "grunt-cli": "~0.1.11",
-    "jasmine-node": "https://github.com/CraigCav/grunt-jasmine-node/tarball/registermultitask",
+    "grunt-jasmine-node": "https://github.com/CraigCav/grunt-jasmine-node/tarball/registermultitask",
     "grunt-contrib-jshint": "~0.8.0"
   },
   "dependencies": {
