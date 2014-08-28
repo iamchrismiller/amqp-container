@@ -48,6 +48,8 @@ amqpInstance.on('ready', function() {
   });
 });
 
+```
+
 
 Advanced AMQP Publish / Subscribe
 
